@@ -18,7 +18,8 @@ for (root, dirs, files) in directories:
 
             p = Path(file)
             img = Image.open(os.path.join(root, file))
-            print("name: {} | format: {}| size: {} | mode: {} ".format(file, img.format, img.size, img.mode))
+            if img:
+                print("name: {} | format: {}| size: {} | mode: {} ".format(file, img.format, img.size, img.mode))
 
 
 # print(list(directories))
